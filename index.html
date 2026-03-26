@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grupo MasTablaroca - Cotizaciones</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @media print {
+            aside, header, .print\:hidden, button, label, .no-pdf {
+                display: none !important;
+            }
+            .print\:block {
+                display: block !important;
+            }
+            .print\:inline-block {
+                display: inline-block !important;
+            }
+            body {
+                background-color: white !important;
+                -webkit-print-color-adjust: exact;
+                margin: 0;
+                padding: 0;
+            }
+            #shipment-area, #quote-document {
+                border: none !important;
+                box-shadow: none !important;
+                padding: 10mm !important;
+                width: 100% !important;
+                max-width: none !important;
+                margin: 0 !important;
+            }
+        }
+        
+        /* Estilos para captura de PDF */
+        .pdf-visible { display: none; }
+        .is-capturing .pdf-visible { display: block !important; }
+        .is-capturing .no-pdf { display: none !important; }
+        .is-capturing #shipment-area, .is-capturing #quote-document {
+            width: 210mm !important; /* Ancho exacto A4 */
+            margin: 0 !important;
+            padding: 20mm !important;
+            border: none !important;
+            box-shadow: none !important;
+        }
+        
+        /* Ocultar flechas de inputs numéricos */
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        
+        /* Scrollbar suave */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.38.0",
+    "html2canvas": "https://esm.sh/html2canvas@1.4.1",
+    "jspdf": "https://esm.sh/jspdf@2.5.1",
+    "xlsx": "https://esm.sh/xlsx@0.18.5"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+{
+  "name": "Remix: Sistema de Control de Inventarios GMM 2.7",
+  "description": "Una aplicación empresarial avanzada para analizar cotizaciones en PDF, calcular utilidades, generar hojas de envío y gestionar inventarios con integración de Gemini API.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
